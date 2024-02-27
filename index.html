@@ -44,6 +44,26 @@
   <script src="static/js/index.js"></script>
 </head>
 
+<style>
+  #teaser_container {
+    display: flex;
+  }
+
+  #teaser_img {
+    float: left;
+    width: 16%;
+    aspect-ratio: 1/1;
+  }
+
+  #teaser_p {
+    padding-left: 5%;
+    float: left;
+
+    display: flex;
+    align-items: center;
+  }
+</style>
+
 <body>
 
 
@@ -124,22 +144,6 @@
   </section>
 
 
-  <!-- Teaser Image-->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/teaser.png" alt="Teaser Image" />
-        <h2 class="subtitle has-text-centered">
-          The paper introduces a novel neural network called QN-Mixer, which employs a latent BFGS algorithm
-          to approximate the Hessian matrix with a deep-net learned regularization term.
-          It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
-          iterations than first-order unrolling networks.
-        </h2>
-      </div>
-    </div>
-  </section>
-  <!-- End teaser video -->
-
   <!-- Paper abstract -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -177,35 +181,53 @@
   <!-- Problem -->
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-3">Sparse-View Reconstruction Challenges</h2>
-          <img src="static/images/sparse_view_ct.png" alt="problem" />
-          <p class="content has-text-justified">
-            Computed tomography (CT) is a widely used imaging modality in medical diagnosis and treatment planning,
-            delivering intricate anatomical details of the human body with precision. Despite its success, CT is
-            associated with high radiation doses, which can increase the risk of cancer induction.
-            Adhering to the ALARA principle (As Low As Reasonably Achievable), the medical community emphasizes
-            minimizing
-            radiation exposure to the lowest level necessary for accurate diagnosis.
-            Numerous approaches have been proposed to reduce radiation doses while maintaining image quality.
-            Among these, sparse-view CT emerges as a promising solution, effectively lowering radiation doses by
-            subsampling the projection data, often referred to as the sinogram.
-            Nonetheless, reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer from
-            pronounced streaking artifacts, which can lead to misdiagnosis.
-            The challenge of effectively reconstructing high-quality CT images from sparse-view data is
-            gaining increasing attention in both the computer vision and medical imaging communities.
-          </p>
-        </div>
+      <h2 class="title is-3" style=" text-align: center;">Sparse-View Reconstruction Challenges</h2>
+      <div class="container" id="teaser_container">
+
+        <img src="static/images/sparse_view_ct.png" alt="problem" id="teaser_img" />
+        <p class="content has-text-justified" id="teaser_p">
+          Computed tomography (CT) is a widely used imaging modality in medical diagnosis and treatment planning,
+          delivering intricate anatomical details of the human body with precision. Despite its success, CT is
+          associated with high radiation doses, which can increase the risk of cancer induction.
+          Adhering to the ALARA principle (As Low As Reasonably Achievable), the medical community emphasizes
+          minimizing
+          radiation exposure to the lowest level necessary for accurate diagnosis.
+          Numerous approaches have been proposed to reduce radiation doses while maintaining image quality.
+          Among these, sparse-view CT emerges as a promising solution, effectively lowering radiation doses by
+          subsampling the projection data, often referred to as the sinogram.
+          Nonetheless, reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer from
+          pronounced streaking artifacts, which can lead to misdiagnosis.
+          The challenge of effectively reconstructing high-quality CT images from sparse-view data is
+          gaining increasing attention in both the computer vision and medical imaging communities.
+        </p>
       </div>
-    </div>
     </div>
   </section>
   <!-- End method overview -->
 
 
-  <!-- Method overview -->
   <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Proposed method</h2>
+
+        <img src="static/images/teaser.png" alt="Proposed method" />
+
+        <p class="content has-text-justified">
+          The paper introduces a novel neural network called QN-Mixer, which employs a latent BFGS algorithm
+          to approximate the Hessian matrix with a deep-net learned regularization term.
+          It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
+          iterations than first-order unrolling networks.
+        </p>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Method overview -->
+  <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
         <h2 class="title is-3">Methodology</h2>
@@ -228,36 +250,37 @@
   <!-- End method overview -->
 
   <!-- Image carousel -->
-  <section class="hero is-small">
+  <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
+        <h2 class="title is-3">Visual Comparison</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/visual_aapm.png" alt="AAPM" />
             <h2 class="subtitle has-text-centered">
-              Visual comparison on AAPM.
+              Visual comparison on AAPM. (PSNR/SSIM)
             </h2>
           </div>
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/visual_aapm_2.png" alt="AAPM" />
             <h2 class="subtitle has-text-centered">
-              Visual comparison on AAPM.
+              Visual comparison on AAPM. (PSNR/SSIM)
             </h2>
           </div>
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/visual_lesion.png" alt="Deeplesion/">
             <h2 class="subtitle has-text-centered">
-              Visual comparison on Deeplesion.
+              Visual comparison on Deeplesion. (PSNR/SSIM)
             </h2>
           </div>
           <div class="item">
             <!-- Your image here -->
             <img src="static/images/visual_lesion_2.png" alt="Deeplesion/">
             <h2 class="subtitle has-text-centered">
-              Visual comparison on Deeplesion.
+              Visual comparison on Deeplesion. (PSNR/SSIM)
             </h2>
           </div>
         </div>
