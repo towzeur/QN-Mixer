@@ -51,14 +51,13 @@
 
   #teaser_img {
     float: left;
-    width: 16%;
-    aspect-ratio: 1/1;
+    width: 45%;
+    height: 45%;
   }
 
   #teaser_p {
     padding-left: 5%;
     float: left;
-
     display: flex;
     align-items: center;
   }
@@ -208,46 +207,68 @@
 
 
   <!-- Problem -->
-  <section class="hero is-small">
-    <div class="hero-body">
-      <h2 class="title is-3" style=" text-align: center;">Sparse-View Reconstruction Challenges</h2>
-      <div class="container" id="teaser_container">
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
 
-        <img src="static/images/sparse_view_ct.png" alt="problem" id="teaser_img" />
-        <p class="content has-text-justified" id="teaser_p">
-          Computed tomography (CT) is a widely used imaging modality in medical diagnosis and treatment planning,
-          delivering intricate anatomical details of the human body with precision. Despite its success, CT is
-          associated with high radiation doses, which can increase the risk of cancer induction.
-          Adhering to the ALARA principle (As Low As Reasonably Achievable), the medical community emphasizes
-          minimizing
-          radiation exposure to the lowest level necessary for accurate diagnosis.
-          Numerous approaches have been proposed to reduce radiation doses while maintaining image quality.
-          Among these, sparse-view CT emerges as a promising solution, effectively lowering radiation doses by
-          subsampling the projection data, often referred to as the sinogram.
-          Nonetheless, reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer from
-          pronounced streaking artifacts, which can lead to misdiagnosis.
-          The challenge of effectively reconstructing high-quality CT images from sparse-view data is
-          gaining increasing attention in both the computer vision and medical imaging communities.
-        </p>
+
+        <h2 class="title is-3">Sparse-View Reconstruction Challenges</h2>
+
+        <div id="teaser_container">
+
+          <img src="static/images/sparse_view_ct.png" alt="problem" id="teaser_img" />
+
+          <p class="content has-text-justified" id="teaser_p">
+            Computed tomography (CT) is a widely used imaging modality in medical diagnosis and treatment planning,
+            delivering intricate anatomical details of the human body with precision. Despite its success, CT is
+            associated with high radiation doses, which can increase the risk of cancer induction.
+            Adhering to the ALARA principle (As Low As Reasonably Achievable), the medical community emphasizes
+            minimizing radiation exposure to the lowest level necessary for accurate diagnosis.
+            Numerous approaches have been proposed to reduce radiation doses while maintaining image quality.
+            Among these, sparse-view CT emerges as a promising solution, effectively lowering radiation doses by
+            subsampling the projection data, often referred to as the sinogram.
+            Nonetheless, reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer from
+            pronounced streaking artifacts, which can lead to misdiagnosis.
+            The challenge of effectively reconstructing high-quality CT images from sparse-view data is
+            gaining increasing attention in both the computer vision and medical imaging communities.
+          </p>
+
+        </div>
+
       </div>
     </div>
+    </div>
   </section>
+
   <!-- End method overview -->
-
-
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
         <h2 class="title is-3">Proposed method</h2>
 
         <img src="static/images/teaser.png" alt="Proposed method" />
 
         <p class="content has-text-justified">
-          The paper introduces a novel neural network called QN-Mixer, which employs a latent BFGS algorithm
-          to approximate the Hessian matrix with a deep-net learned regularization term.
-          It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
-          iterations than first-order unrolling networks.
+          Reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer
+          from pronounced streaking artifacts.
+
+        <ol type="a">
+          <li>Initial deep learning techniques applied to post-processing tasks on FBP reconstructed images show
+            promise in artifact removal and structure preservation but face limitations due to constrained receptive
+            fields,leading to suboptimal results.</li>
+          <li>Deep unrolling algorithms, such as the learned primal-dual (LPD) algorithm, have been introduced to
+            optimize the reconstruction process. However, they face issues such
+            as slow convergence and high computational costs. Consequently, there is a need to explore more efficient
+            alternatives due to the difficulties in capturing long-range dependencies and the growing computational
+            demands of modern neural networks.</li>
+          <li>The paper introduces a second-order unrolling network <br>called QN-Mixer<br>, which employs a latent
+            BFGS algorithm to approximate the Hessian matrix with a deep-net learned regularization term.
+            It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
+            iterations than first-order unrolling networks.</li>
+        </ol>
         </p>
+
+
 
       </div>
     </div>
@@ -258,22 +279,30 @@
   <!-- Method overview -->
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is-max-desktop">
         <h2 class="title is-3">Methodology</h2>
+
 
         <!-- Your image here -->
         <img src="static/images/overview.png" alt="overview" />
 
         <p class="content has-text-justified">
-          The figure above illustrates the QN-Mixer architecture.
           Our method is a new type of second-order unrolling network, drawing inspiration from the quasi-Newton method.
-          It approximates the inverse Hessian matrix using a latent BFGS algorithm and incorporates a non-local
-          regularization term, Incept-Mixer, aimed at capturing non-local relationships. To address the computational
-          challenges associated with full inverse Hessian matrix approximation, a latent BFGS algorithm is utilized.
+          The figure above illustrates the QN-Mixer architecture. It approximates the inverse Hessian matrix using a
+          latent BFGS algorithm and incorporates a non-local regularization term, Incept-Mixer, aimed at capturing
+          non-local relationships. To address the computational challenges associated with full inverse Hessian matrix
+          approximation, a latent BFGS algorithm is utilized.
         </p>
 
-        <img src="static/images/Incept-Mixer-1.png" alt="incept-mixer" style="width: 600px; aspect-ratio:same" />
+        <div style="display: flex; justify-content: center;">
+          <img src="static/images/Incept-Mixer-1.png" alt="incept-mixer" style="width: 600px; aspect-ratio:same" />
+        </div>
 
+        <p class="content has-text-justified">
+          Incept-Mixer bloc is crafted by drawing inspiration from both the multi-layer perceptron mixer and the
+          inception architecture, leveraging the strengths of each: capturing long-range interactions through the
+          attention-like mechanism of MLPMixer and extracting local invariant features from the inception block.
+        </p>
 
 
       </div>
