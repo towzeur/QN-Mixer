@@ -1,4 +1,4 @@
-https://github.com/towzeur/QN-Mixer/deployments/github-pages
+https://towzeur.github.io/QN-Mixer/
 
 
 # Academic Project Page Template
