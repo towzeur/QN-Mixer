@@ -1,6 +1,8 @@
+https://github.com/towzeur/QN-Mixer/deployments/github-pages
+
+
 # Academic Project Page Template
 This is an academic paper project page template.
-
 
 Example project pages built using this template are:
 - https://vision.huji.ac.il/spectral_detuning/

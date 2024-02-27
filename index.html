@@ -129,8 +129,10 @@
       <div class="hero-body">
         <img src="static/images/teaser.png" alt="Teaser Image" />
         <h2 class="subtitle has-text-centered">
-          Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat
-          pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus.
+          The paper introduces a novel neural network called QN-Mixer, which employs a latent BFGS algorithm
+          to approximate the Hessian matrix with a deep-net learned regularization term.
+          It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
+          iterations than first-order unrolling networks.
         </h2>
       </div>
     </div>
@@ -171,13 +173,38 @@
   </section>
   <!-- End paper abstract -->
 
-
-
-  <!-- Method overview -->
+  <!-- Problem -->
   <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3">Teaser</h2>
+        <h2 class="title is-3">Sparse-View Reconstruction Challenges</h2>
+        <img src="static/images/sparse_view_ct.png" alt="problem" />
+        <p class="content has-text-justified">
+          Computed tomography (CT) is a widely used imaging modality in medical diagnosis and treatment planning,
+          delivering intricate anatomical details of the human body with precision. Despite its success, CT is
+          associated with high radiation doses, which can increase the risk of cancer induction.
+          Adhering to the ALARA principle (As Low As Reasonably Achievable), the medical community emphasizes minimizing
+          radiation exposure to the lowest level necessary for accurate diagnosis.
+          Numerous approaches have been proposed to reduce radiation doses while maintaining image quality.
+          Among these, sparse-view CT emerges as a promising solution, effectively lowering radiation doses by
+          subsampling the projection data, often referred to as the sinogram.
+          Nonetheless, reconstructed images using the well-known Filtered Back Projection (FBP) algorithm suffer from
+          pronounced streaking artifacts, which can lead to misdiagnosis.
+          The challenge of effectively reconstructing high-quality CT images from sparse-view data is
+          gaining increasing attention in both the computer vision and medical imaging communities.
+        </p>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End method overview -->
+
+
+  <!-- Problem -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">teaser of QN-Mixer</h2>
 
         <!-- Your image here -->
         <img src="static/images/teaser.png" alt="teaser of QN-Mixer" />
@@ -187,6 +214,31 @@
           to approximate the Hessian matrix with a deep-net learned regularization term.
           It outperforms state-of-the-art methods in terms of quantitative metrics while requiring fewer
           iterations than first-order unrolling networks.
+        </p>
+
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End method overview -->
+
+
+
+  <!-- Method overview -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3">Methodology</h2>
+
+        <!-- Your image here -->
+        <img src="static/images/overview.png" alt="overview" />
+
+        <p class="content has-text-justified">
+          The figure above illustrates the QN-Mixer architecture.
+          Our method is a new type of second-order unrolling network, drawing inspiration from the quasi-Newton method.
+          It approximates the inverse Hessian matrix using a latent BFGS algorithm and incorporates a non-local
+          regularization term, Incept-Mixer, aimed at capturing non-local relationships. To address the computational
+          challenges associated with full inverse Hessian matrix approximation, a latent BFGS algorithm is utilized.
         </p>
 
       </div>
@@ -233,32 +285,6 @@
     </div>
   </section>
   <!-- End image carousel -->
-
-  <!-- Method overview -->
-  <section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Methodology</h2>
-
-        <!-- Your image here -->
-        <img src="static/images/overview.png" alt="overview" />
-
-        <p class="content has-text-justified">
-          The figure above illustrates the QN-Mixer architecture.
-          Our method is a new type of second-order unrolling network, drawing inspiration from the quasi-Newton method.
-          It approximates the inverse Hessian matrix using a latent BFGS algorithm and incorporates a non-local
-          regularization term, Incept-Mixer, aimed at capturing non-local relationships. To address the computational
-          challenges associated with full inverse Hessian matrix approximation, a latent BFGS algorithm is utilized.
-        </p>
-
-      </div>
-    </div>
-    </div>
-  </section>
-  <!-- End method overview -->
-
-
-
 
 
   <!--BibTex citation -->
