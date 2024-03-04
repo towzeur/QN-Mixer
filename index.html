@@ -5,23 +5,25 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
-  <meta property="og:url" content="URL OF THE WEBSITE" />
+  <meta name="description" content="Project page of QN-Mixer">
+  <meta property="og:title" content="QN-Mixer: A Quasi-Newton MLP-Mixer Model for Sparse-View CT Reconstruction" />
+  <meta property="og:description"
+    content="Project page of the CVPR 2024 paper QN-Mixer: A Quasi-Newton MLP-Mixer Model for Sparse-View CT Reconstruction" />
+  <meta property="og:url" content="https://towzeur.github.io/QN-Mixer/" />
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/banner.png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image:height" content="513" />
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="Project page of QN-Mixer">
+  <meta name="twitter:description"
+    content="Project page of the CVPR 2024 paper QN-Mixer: A Quasi-Newton MLP-Mixer Model for Sparse-View CT Reconstruction">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="static/images/banner.png">
+  <meta name="twitter:card" content="static/images/overview.png">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="QN-Mixer,CVPR,CVPR'24,CVPR 2024,CT,Quasi-Newton,MLP-Mixer,Sparse-View,Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -238,9 +240,12 @@
             promise in artifact removal and structure preservation but face limitations due to constrained receptive
             fields, leading to suboptimal results. However, these methods are computationally efficient.
           </li>
-          <li>Deep unrolling algorithms, such as the RegFormer algorithm, have been introduced as an iterative reconstruction methods. 
-            However, they face issues such as slow convergence and high computational costs. Consequently, there is a need to explore more efficient
-            alternatives due to the difficulties in capturing long-range dependencies and the growing computational demands of modern neural networks.
+          <li>Deep unrolling algorithms, such as the RegFormer algorithm, have been introduced as an iterative
+            reconstruction methods.
+            However, they face issues such as slow convergence and high computational costs. Consequently, there is a
+            need to explore more efficient
+            alternatives due to the difficulties in capturing long-range dependencies and the growing computational
+            demands of modern neural networks.
           </li>
           <li>The paper introduces a second-order unrolling network called QN-Mixer, which employs a latent
             BFGS algorithm to approximate the inverse Hessian matrix with a deep-net learned regularization term.
@@ -353,7 +358,8 @@
     <div class="container is-max-desktop content">
       <h2 class="title">Acknowledgements</h2>
       <p>
-        This work was granted access to the HPC resources of IDRIS under the allocation 2021-[AD011012741] provided by GENCI and supported by DIM Math Innov funding.
+        This work was granted access to the HPC resources of IDRIS under the allocation 2021-[AD011012741] provided by
+        GENCI and supported by DIM Math Innov funding.
       </p>
     </div>
   </section>
