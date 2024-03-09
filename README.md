@@ -1,6 +1,11 @@
+# QN-Mixer: A Quasi-Newton MLP-Mixer Model for Sparse-View CT Reconstruction
 
+## CVPR 2024
 
-The [project page](https://towzeur.github.io/QN-Mixer/) of: [QN-Mixer: A Quasi-Newton MLP-Mixer Model for Sparse-View CT Reconstruction](https://arxiv.org/abs/2402.17951)
+[Project Page](https://towzeur.github.io/QN-Mixer/) | [Paper](https://arxiv.org/abs/2402.17951)
+
+<img src="static/images/banner.png" width="100%"/></br>
+
 
 # Abstract
 
